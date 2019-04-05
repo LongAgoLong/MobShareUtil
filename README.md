@@ -1,6 +1,6 @@
 # MobShareUtil
 Mob自定义分享UI/授权登录工具类   
-[![](https://jitpack.io/v/LongAgoLong/MobShareUtil.svg)](https://jitpack.io/#LongAgoLong/MobShareUtil)  
+[![](https://jitpack.io/v/LongAgoLong/MobShareUtil.svg)](https://jitpack.io/#LongAgoLong/MobShareUtil)    
 **gradle依赖**
 ```java
 allprojects {
