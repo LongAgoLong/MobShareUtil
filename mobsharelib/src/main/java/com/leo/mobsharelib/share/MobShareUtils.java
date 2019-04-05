@@ -115,7 +115,7 @@ public final class MobShareUtils {
      * @param oks    OnekeyShare对象
      * @param wxPath 小程序中的页面的路径
      */
-    private static void setShareWXMiniProgram(OnekeyShare oks, String wxPath) {
+    public static void setShareWXMiniProgram(OnekeyShare oks, String wxPath) {
         oks.setShareContentCustomizeCallback((platform, paramsToShare) -> {
             if (platform.getName().equals("Wechat")) {
                 paramsToShare.setShareType(Platform.SHARE_WXMINIPROGRAM);
