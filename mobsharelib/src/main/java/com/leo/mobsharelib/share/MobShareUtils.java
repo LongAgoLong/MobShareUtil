@@ -1,7 +1,6 @@
 package com.leo.mobsharelib.share;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.widget.Toast;
 
@@ -41,6 +40,7 @@ public final class MobShareUtils {
 
     /**
      * 自定义UI分享的实现
+     *
      * @param context
      * @param title
      * @param content
@@ -48,7 +48,7 @@ public final class MobShareUtils {
      * @param shareUrl
      * @return OnekeyShare调用setPlatform设置分享到指定平台，然后调用show；如果需要分享微信小程序调用setShareWXMiniProgram方法
      */
-    public static OnekeyShare share(Context context, @NonNull String title, @NonNull String content, String image, @NonNull String shareUrl) {
+    public static OnekeyShare share(Context context, String title, String content, String image, String shareUrl) {
         if (title.length() > 20) {
             title = title.substring(0, 20) + "...";
         }
@@ -115,7 +115,7 @@ public final class MobShareUtils {
      * @param oks    OnekeyShare对象
      * @param wxPath 小程序中的页面的路径
      */
-    private static void setShareWXMiniProgram(@NonNull OnekeyShare oks, @NonNull String wxPath) {
+    private static void setShareWXMiniProgram(OnekeyShare oks, String wxPath) {
         oks.setShareContentCustomizeCallback((platform, paramsToShare) -> {
             if (platform.getName().equals("Wechat")) {
                 paramsToShare.setShareType(Platform.SHARE_WXMINIPROGRAM);
